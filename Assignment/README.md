@@ -8,7 +8,7 @@
 
 |   #   | File            | Description 
 | :---: | --------------- | -------------------------
-|   1   | Fraction.h      | Header file defining the `Fraction` class and its methods.   |
+|   1   | [Fraction.h](Fraction.h)    | Header file defining the `Fraction` class and its methods.   |
 |   2   | Fraction.cpp    | Implementation file containing the logic for the `Fraction` class methods and operator overloading. |
 |   3   | main.cpp        | Main program file that reads input and displays the results. |
 |   4   | fractions.txt   | Input file containing fractions and operations to be processed by the program. |
