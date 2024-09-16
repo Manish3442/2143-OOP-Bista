@@ -1,8 +1,7 @@
 # P01 - Fraction Class
 ### Manish Bista
 ### Description:
-    
-    This program implements a Fraction class to perform operations on fractions in which Fraction class overloads addition, subtraction, division, multiplication, and comparisons. The program reads the input file and give the desire output in arthmetic operation.
+This program implements a Fraction class to perform operations on fractions in which Fraction class overloads addition, subtraction, division, multiplication, and comparisons. The program reads the input file and give the desire output in arthmetic operation.
 
 ### Files
 
