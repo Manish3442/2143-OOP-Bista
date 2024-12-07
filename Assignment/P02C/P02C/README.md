@@ -6,6 +6,12 @@ Knucklebones is a turn-based dice game for two players where each player tries t
 
 Players roll a six-sided dice, then choose which column in their grid to place the rolled value. The goal is to maximize the score by strategically placing dice and filling the grid. The game ends when both players' grids are completely full, and the player with the highest score wins.
 
+### Problem Description:
+
+When the program is run, it displays the the players state. However, the game does not proceed beyond this point. No prompt appears to guide the user on the next steps, and the program is unresponsive to keyboard inputs. It remains stuck on this screen without any further interaction. The program displays the game state but fails to provide a prompt or capture input for progression.
+
+
+
 ---
 
 ### Files
