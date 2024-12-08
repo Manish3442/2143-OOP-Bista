@@ -10,7 +10,7 @@ Key features of the game:
 - **Dice Rolling Animation**: The dice is animated as it rolls across the screen.
 - **Turn-Based**: Players take turns rolling dice and placing them in the grid.
 - **Scoring System**: Points are awarded for placing dice in the grid, with a bonus for stacking identical dice values.
-- **Player Input**: Players use the keyboard to roll the dice and place the dice in one of three columns.
+- **Player Input**: Players use the mouse and buttons to roll the dice and place the dice value in one of three columns.
 
 This project uses **SFML** for graphics rendering and animation.
 
@@ -18,12 +18,12 @@ This project uses **SFML** for graphics rendering and animation.
 
 |   #   | File            | Description                                                                 |
 | :---: | --------------- | --------------------------------------------------------------------------- |
-|   1   | `Main.cpp`       | Main entry point of the game, initializes the window and handles game loop. |
-|   2   | `Game.cpp`       | Contains the core logic of the game, including dice roll animation and turn management. |
-|   3   | `Game.h`         | Header file for the `Game` class, declaring methods for the game logic.      |
-|   4   | `Player.cpp`     | Handles player-related logic, including grid management and score calculation. |
-|   5   | `Player.h`       | Header file for the `Player` class, declaring methods for grid and score management. |
-|   6   | `README.md`      | This file, describing the project and how to run it.                        |
+|   1   |  [`Main.cpp`](./Main.cpp)  | Main entry point of the game, initializes the window and handles game loop. |
+|   2   | [`Game.cpp`](./Game.cpp)   | Contains the core logic of the game, including dice roll animation and turn management. |
+|   3   |  [`Game.h`](./Game.h)      | Header file for the `Game` class, declaring methods for the game logic.      |
+|   4   | [`Player.cpp`](./Player.cpp)     | Handles player-related logic, including grid management and score calculation. |
+|   5   |[`Player.h`](./Player.h)       | Header file for the `Player` class, declaring methods for grid and score management. |
+|   6   |[`README.md`](./README.md)      | This file, describing the project and how to run it.                        |
 
 ## Instructions
 
