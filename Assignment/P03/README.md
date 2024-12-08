@@ -37,5 +37,7 @@ This project uses **SFML** for graphics rendering and animation.
   brew install sfml
 ## Compilation and Running
   make
+  
   ./knucklebones
+  
   make clean
