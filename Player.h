@@ -10,6 +10,7 @@ private:
 public:
     Player();
     int placeDice(int column, int diceValue);
+    int removeOpponentDice(int row, int column, int diceValue);
     int removeOpponentDice(int column, int diceValue);
     bool isColumnFull(int column) const;
     bool isGridFull() const;
