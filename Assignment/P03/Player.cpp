@@ -13,14 +13,16 @@ int Player::placeDice(int column, int diceValue) {
 }
 
 int Player::removeOpponentDice(int column, int diceValue) {
+    int destroyedCount = 0; 
     for (int row = 0; row < 3; ++row) {
         if (grid[row][column] == diceValue) {
-            grid[row][column] = 0;
-            return row;
+            grid[row][column] = 0; 
+            destroyedCount++;
         }
     }
-    return -1;
+    return destroyedCount; 
 }
+
 
 bool Player::isColumnFull(int column) const {
     return grid[0][column] != 0;
