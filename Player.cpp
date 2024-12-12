@@ -1,6 +1,4 @@
-#include <iostream>
 #include "Player.h"
-#include <unordered_map>
 
 Player::Player() : grid(3, std::vector<int>(3, 0)) {}
 
@@ -14,14 +12,14 @@ int Player::placeDice(int column, int diceValue) {
     return -1;
 }
 
-int Player::removeOpponentDice(int row, int column, int diceValue) {
-    if (grid[row][column] == diceValue) { // Check if the specific box contains the matching value
-        grid[row][column] = 0; // Remove the die
-        std::cout << "Removed dice of value " << diceValue
-                  << " from row " << row + 1 << ", column " << column + 1 << std::endl;
-        return row; // Indicate that the die was successfully removed
+int Player::removeOpponentDice(int column, int diceValue) {
+    for (int row = 0; row < 3; ++row) {
+        if (grid[row][column] == diceValue) {
+            grid[row][column] = 0;
+            return row;
+        }
     }
-    return -1; // Indicate that no dice were removed
+    return -1;
 }
 
 bool Player::isColumnFull(int column) const {
@@ -37,22 +35,14 @@ bool Player::isGridFull() const {
 
 int Player::calculateScore() const {
     int score = 0;
-    for (int col = 0; col < 3; ++col) {
-        std::unordered_map<int, int> diceCount; // To count occurrences of dice values
-        for (int row = 0; row < 3; ++row) {
-            int value = grid[row][col];
-            if (value != 0) {
-                diceCount[value]++;
-            }
-        }
-        // Calculate column score with multipliers
-        for (const auto& pair : diceCount) {
-            score += pair.first * pair.second * pair.second; // Multiplier: value * occurrences^2
+    for (const auto& row : grid) {
+        for (int value : row) {
+            score += value; // Sum all dice values
         }
     }
+    
     return score;
 }
-
 
 int Player::getGridValue(int row, int col) const {
     return grid[row][col];
