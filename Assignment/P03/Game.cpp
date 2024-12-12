@@ -125,19 +125,14 @@ void Game::handleInput() {
     }
 }
 
-
 void Game::updateGrid(Player& player, int column, int row) {
     if (diceValue == 0) {
         std::cout << "You need to roll the dice first!" << std::endl;
-        
-        std::cout << "Dice Value: " << diceValue << std::endl;
         return;
     }
 
-
     if (player.getGridValue(row, column) != 0) {
         std::cout << "This box is already occupied!" << std::endl;
-        std::cout << "You need to roll the dice first!" << std::endl;
         return;
     }
 
@@ -146,12 +141,20 @@ void Game::updateGrid(Player& player, int column, int row) {
     std::cout << "Placed dice " << diceValue << " in column " << column + 1
               << ", row " << row + 1 << std::endl;
 
+    // Destroy opponent's dice of the same value in the same column
+    Player& opponent = player1Turn ? player2 : player1;
+    int destroyed = opponent.removeOpponentDice(column, diceValue);
+    if (destroyed >= 0) {
+        std::cout << "Destroyed dice " << diceValue << " in opponent's column " << column + 1 << std::endl;
+    }
+
     // Reset dice value after placing
     diceValue = 0;
 
     // Switch turns
     player1Turn = !player1Turn;
 }
+
 
 
 void Game::draw() {
