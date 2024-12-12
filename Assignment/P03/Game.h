@@ -39,7 +39,8 @@ public:
     void rollDice();
     void run(); 
     void draw();  
-    bool isGameOver() const;               
+    bool isGameOver() const;  
+    std::vector<int> getSafeColumnsForCombos(const Player& opponent) const;
 private:
     void updateDiceAnimation(); 
     
