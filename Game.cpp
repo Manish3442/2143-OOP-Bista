@@ -85,7 +85,15 @@ void Game::rollDice() {
 
     std::cout << "Dice Rolled: " << diceValue << std::endl; // Debug message
 }
-
+std::vector<int> Game::getSafeColumnsForCombos(const Player& opponent) const {
+    std::vector<int> safeColumns;
+    for (int col = 0; col < 3; ++col) {
+        if (opponent.isColumnFull(col)) {
+            safeColumns.push_back(col);
+        }
+    }
+    return safeColumns;
+}
 
 
 void Game::handleInput() {
